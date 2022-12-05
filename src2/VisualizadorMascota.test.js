@@ -5,6 +5,12 @@ import { getPetByID } from "./services/mascotas";
 import { render, screen } from "@testing-library/react";
 
 describe("VisualizadorMascota component", () => {
+  const mockLocation = {
+    pathname: "/",
+    hash: "",
+    search: "",
+    state: "",
+  };
   let nombre;
   let species;
   let breed;
@@ -15,7 +21,6 @@ describe("VisualizadorMascota component", () => {
   let reward;
   let disappearanceDate;
   let publishDate;
-  let photos;
   beforeEach(() => {
     // eslint-disable-next-line testing-library/no-render-in-setup
     render(<VisualizadorMascota />);
@@ -33,8 +38,6 @@ describe("VisualizadorMascota component", () => {
     disappearanceDate = document.getElementById("fechaPerd").innerHTML;
     reward = document.getElementById("rew").innerHTML;
     publishDate = document.getElementById("fechaPubl").innerHTML;
-    photos = document.getElementById("fotos");
-    console.log(photos, "fotos");
 
     expect(nombre).toBe("Lulu");
     expect(species).toBe("Gato");
@@ -46,9 +49,6 @@ describe("VisualizadorMascota component", () => {
     expect(description).toBe("Se ha perdido");
     expect(reward).toBe("Un gritón de dolares");
     expect(publishDate).toBe("2022-12-03T16:31:44.984551Z");
-    expect(photos).toBe(
-      "http://127.0.0.1:8000/media/api/posts/114/pictures/IMG-20200114-WA0022.jpg"
-    );
   });
 
   test("1136 - Sexo de las mascotas", () => {
