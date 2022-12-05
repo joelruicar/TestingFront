@@ -2,50 +2,39 @@ export default function DatosMascota({ datos }) {
   return (
     <section className="contenedor-datos-mascota">
       <h1 className="titulo-datos">Datos de la mascota</h1>
+
       <label title="nombre mascota">Nombre</label>
-      <h1 id="mascotita" title="asdasds">
-        Lulu
-      </h1>
+      <h1 id="nombre">Lulu</h1>
+
       <label>Especie</label>
-      <h3>{datos.species}</h3>
+      <h3 id="especie">Gato</h3>
 
       <label>Sexo</label>
-      {datos.sex === "H" && <p>Hembra</p>}
-      {datos.sex === "M" && <p>Macho</p>}
-      {datos.sex === "O" && <p>Otro</p>}
+      <p id="genero">Hembra</p>
 
       <label>Raza</label>
-      <h3>{datos.breed}</h3>
+      <h3 id="raza">Pixie bob</h3>
 
       <label>Año de nacimiento </label>
-      {datos.birthDate === undefined ? (
-        <p>{datos.birthDate}</p>
-      ) : (
-        <p>{datos.birthDate.substring(0, 4)}</p>
-      )}
+
+      <p id="edad">2016</p>
 
       <label>Descripcion</label>
-      <p>{datos.description}</p>
+      <p id="desc">Se ha perdido</p>
 
       <label>Fecha de desaparicion</label>
-      {datos.disappearanceDate === undefined ? (
-        <p>{datos.disappearanceDate}</p>
-      ) : (
-        <p>{datos.disappearanceDate.substring(0, 10)}</p>
-      )}
+
+      <p>{datos.disappearanceDate}</p>
+      <p id="fechaPerd">2022-12-01T13:45:00Z</p>
 
       <label>Contacto</label>
-      <p>{datos.phone}</p>
+      <p id="tlf">123456789</p>
 
       <label>Fecha de publicacion</label>
-      {datos.publishDate === undefined ? (
-        <p>{datos.publishDate}</p>
-      ) : (
-        <p>{datos.publishDate.substring(0, 10)}</p>
-      )}
+      <p id="fechaPubl">2022-12-03T16:31:44.984551Z</p>
 
       <label>Recompensa</label>
-      <p>{datos.reward}</p>
+      <p id="rew">Un gritón de dolares</p>
     </section>
   );
 }
