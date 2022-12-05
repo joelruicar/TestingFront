@@ -9,10 +9,8 @@ const VisualizadorMascota = () => {
   let datosPet = useParams();
   const [pet, setPet] = useState({});
 
-  let { id } = useParams();
-
   useEffect(() => {
-    getPetByID(datosPet.id, datosPet.found)
+    getPetByID(114, "lost")
       .then(async (response) => {
         const data = await response.json();
         if (!response.ok) {

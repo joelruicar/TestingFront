@@ -2,8 +2,10 @@ export default function DatosMascota({ datos }) {
   return (
     <section className="contenedor-datos-mascota">
       <h1 className="titulo-datos">Datos de la mascota</h1>
-      <label>Nombre</label>
-      <h1>{datos.name}</h1>
+      <label title="nombre mascota">Nombre</label>
+      <h1 id="mascotita" title="asdasds">
+        Lulu
+      </h1>
       <label>Especie</label>
       <h3>{datos.species}</h3>
 
