@@ -3,38 +3,36 @@ export default function DatosMascota({ datos }) {
     <section className="contenedor-datos-mascota">
       <h1 className="titulo-datos">Datos de la mascota</h1>
 
-      <label title="nombre mascota">Nombre</label>
-      <h1 id="nombre">Lulu</h1>
+      <label>Nombre</label>
+      <h1 id="nombre">{datos.name}</h1>
 
       <label>Especie</label>
-      <h3 id="especie">Gato</h3>
+      <h3 id="especie">{datos.species}</h3>
 
       <label>Sexo</label>
-      <p id="genero">Hembra</p>
+      {datos.sex === "H" && <p id="genero"> Hembra</p>}
+      {datos.sex === "M" && <p id="genero">Macho</p>}
 
       <label>Raza</label>
-      <h3 id="raza">Pixie bob</h3>
+      <h3 id="raza">{datos.breed}</h3>
 
       <label>Año de nacimiento </label>
-
-      <p id="edad">2016</p>
+      <p id="edad">2{datos.birthDate}</p>
 
       <label>Descripcion</label>
-      <p id="desc">Se ha perdido</p>
+      <p id="desc">{datos.description}</p>
 
       <label>Fecha de desaparicion</label>
-
-      <p>{datos.disappearanceDate}</p>
-      <p id="fechaPerd">2022-12-01T13:45:00Z</p>
+      <p id="fechaPerd">{datos.disappearanceDate}</p>
 
       <label>Contacto</label>
-      <p id="tlf">123456789</p>
+      <p id="tlf">{datos.phone}</p>
 
       <label>Fecha de publicacion</label>
-      <p id="fechaPubl">2022-12-03T16:31:44.984551Z</p>
+      <p id="fechaPubl">{datos.publishDate}</p>
 
       <label>Recompensa</label>
-      <p id="rew">Un gritón de dolares</p>
+      <p id="rew">{datos.reward}</p>
     </section>
   );
 }

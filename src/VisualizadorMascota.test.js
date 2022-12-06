@@ -1,8 +1,7 @@
 /* eslint-disable jest/no-conditional-expect */
 /* eslint-disable testing-library/no-node-access */
 import VisualizadorMascota from "./components/VisualizadorMascota.jsx";
-import { getPetByID } from "./services/mascotas";
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 
 describe("VisualizadorMascota component", () => {
   let nombre;
