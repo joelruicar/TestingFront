@@ -8,9 +8,10 @@ import CarouselMascota from "./Carousel/CarouselMascota/CarouselMascota";
 const VisualizadorMascota = () => {
   let datosPet = useParams();
   const [pet, setPet] = useState({});
-
+  var a = window.location.href;
+  var id = a.split("lost/")[1];
   useEffect(() => {
-    getPetByID(114, "lost")
+    getPetByID(id, "lost")
       .then(async (response) => {
         const data = await response.json();
         if (!response.ok) {

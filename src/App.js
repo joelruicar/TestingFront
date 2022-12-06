@@ -1,11 +1,17 @@
-import VisualizadorMascota from "./components/VisualizadorMascota";
+import VisualizadorMascota from "./components2/VisualizadorMascota";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <VisualizadorMascota />
-    </div>
+    <>
+      <Routes>
+        <Route
+          path="/mascotas/lost/:id"
+          element={<VisualizadorMascota></VisualizadorMascota>}
+        ></Route>
+      </Routes>
+    </>
   );
 }
 

@@ -6,7 +6,6 @@ const CarouselMascota = ({ pet }) => {
 
   useEffect(() => {
     setSlides(pet.pictures);
-    console.log(slides);
   }, [pet, slides]);
 
   return (

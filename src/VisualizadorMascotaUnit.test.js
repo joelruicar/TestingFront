@@ -1,4 +1,3 @@
-/* eslint-disable testing-library/no-render-in-setup */
 /* eslint-disable jest/no-conditional-expect */
 /* eslint-disable testing-library/no-node-access */
 import VisualizadorMascota from "./components/VisualizadorMascota.jsx";
@@ -17,6 +16,7 @@ describe("VisualizadorMascota component", () => {
   let publishDate;
   let photos;
   beforeEach(() => {
+    // eslint-disable-next-line testing-library/no-render-in-setup
     render(<VisualizadorMascota />);
   });
 
