@@ -1,26 +1,20 @@
+/* eslint-disable testing-library/no-render-in-setup */
 /* eslint-disable jest/no-conditional-expect */
 /* eslint-disable testing-library/no-node-access */
 import VisualizadorMascota from "./components/VisualizadorMascota.jsx";
 import { render } from "@testing-library/react";
 
 describe("VisualizadorMascota component", () => {
-  let nombre;
-  let species;
-  let breed;
-  let sex;
-  let age;
-  let description;
-  let phone;
-  let reward;
-  let disappearanceDate;
-  let publishDate;
-  let photos;
+  let nombre, species;
+  let breed, sex;
+  let age, description;
+  let phone, reward;
+  let disappearanceDate, publishDate, photos;
   beforeEach(() => {
-    // eslint-disable-next-line testing-library/no-render-in-setup
     render(<VisualizadorMascota />);
   });
 
-  test("2029 - Carga de datos formulario", () => {
+  it("2029 - Carga de datos formulario", () => {
     nombre = document.getElementById("nombre").innerHTML;
     species = document.getElementById("especie").innerHTML;
     breed = document.getElementById("especie").innerHTML;
@@ -43,14 +37,14 @@ describe("VisualizadorMascota component", () => {
     expect(phone).toBe("123456789");
     expect(disappearanceDate).toBe("2022-12-01T13:45:00Z");
     expect(description).toBe("Se ha perdido");
-    expect(reward).toBe("Un gritón de dolares");
+    expect(reward).toBe("500€");
     expect(publishDate).toBe("2022-12-03T16:31:44.984551Z");
     expect(photos).toBe(
       "http://127.0.0.1:8000/media/api/posts/114/pictures/IMG-20200114-WA0022.jpg"
     );
   });
 
-  test("1136 - Sexo de las mascotas", () => {
+  it("1136 - Sexo de las mascotas", () => {
     sex = document.getElementById("genero").innerHTML;
     if (sex === "Macho" || sex === "Hembra") {
       expect("a").toBe("a");

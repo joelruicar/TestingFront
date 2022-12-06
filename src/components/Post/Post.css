@@ -1,0 +1,115 @@
+.nombre-mascota{
+  text-align: center;
+  padding: 10px 0;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin-bottom: 5px;
+}
+
+.contenedor-general-carta{
+  float: left;
+  width: 24%;
+  padding:30px;
+}
+
+.contenedor-carta{
+  height: 300px;
+  border: 1px solid black;
+  position: relative;
+  border-radius: 15px;
+  display: block;
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.contenedor-carta:hover .informacion-secundaria-mascota{
+  bottom: 0;
+  height: 100%;
+}
+.contenedor-carta img{
+  width: 170px;
+  height:170px;
+  border: 0.5px solid black;
+  border-radius: 50%;
+  padding: 20px;
+}
+
+
+.informacion-principal-mascota{
+  text-align: center;
+  height: 100%;
+}
+
+.info{
+  padding: 20px 0;
+}
+
+.informacion-mascota a{
+  padding: 3px;
+  width: 20px;
+  border: 1px solid black;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+.informacion-mascota a:hover{
+  background-color: purple;
+  color: white;
+}
+
+.informacion-secundaria-mascota{
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: purple;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+  text-align: center;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+.informacion-secundaria-mascota p{
+  background-color: white;
+  border-radius: 10px;
+  line-height: 25px;
+  padding: 3px;
+} 
+
+.informacion-secundaria-mascota a{
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px 10px;
+} 
+
+/*--------------------------------------------------------------
+# Media Queries
+--------------------------------------------------------------*/
+
+@media (max-width:481px)  { 
+  .contenedor-general-carta{
+      width: 100%;
+  }
+}
+@media (min-width:481px)  { 
+  .contenedor-general-carta{
+      width: 50%;
+  }
+}
+@media (min-width:961px)  { 
+  .contenedor-general-carta{
+      width: 50%;
+  }
+}
+@media (min-width:1023px) {
+  .contenedor-general-carta{
+      width: 24%;
+  }
+}
+@media (min-width:1281px) {
+
+}
