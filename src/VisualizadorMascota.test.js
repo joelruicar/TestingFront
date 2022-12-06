@@ -33,7 +33,7 @@ describe("VisualizadorMascota component", () => {
     disappearanceDate = document.getElementById("fechaPerd").innerHTML;
     reward = document.getElementById("rew").innerHTML;
     publishDate = document.getElementById("fechaPubl").innerHTML;
-    photos = document.getElementById("fotos");
+    photos = document.getElementById("fotos").src;
     console.log(photos, "fotos");
 
     expect(nombre).toBe("Lulu");

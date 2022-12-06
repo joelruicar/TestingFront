@@ -23,9 +23,13 @@ const CarouselMascota = ({ pet }) => {
         </div>
       </div>
       <div className="carousel-inner">
-        {slides && slides[0] && (
-          <img id="fotos" src={slides[0].image_url} alt="" />
-        )}
+        <img
+          id="fotos"
+          src={
+            "http://127.0.0.1:8000/media/api/posts/114/pictures/IMG-20200114-WA0022.jpg"
+          }
+          alt="aaa"
+        />
       </div>
     </div>
   );
