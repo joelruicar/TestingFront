@@ -13,15 +13,15 @@ const Post = ({ mascota }) => {
   return (
     <div className="contenedor-general-carta">
       <div className="nombre-mascota">
-        <h3>{masc.name}</h3>
+        <h1 id="nombre">{masc.name}</h1>
       </div>
       <div className="contenedor-carta">
         <div className="informacion-principal-mascota">
           <div className="info">
-            <h3>{masc.address}</h3>
-            <h3>{masc.disappearanceDate}</h3>
+            <h1 id="direccion">{masc.address}</h1>
+            <h1 id="fechaDesaparicion">{masc.disappearanceDate}</h1>
           </div>
-          <img src={imagenMascota} alt="imagen-mascota" />
+          <img id="img" src={imagenMascota} alt="imagen-mascota" />
         </div>
         <div className="informacion-secundaria-mascota">
           <p>{mascota.description}</p>
